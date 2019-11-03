@@ -1,0 +1,23 @@
+## create a function where users guess numbers 1-10 and it sticks the numbers
+## if the numbers is within 2 from correct answers, prompt it "it's so close, try again"
+## if it's too much out of the prediction, say "well, you'd gotta do better"
+
+import random
+
+def random_game():
+    n = random.randint(1,10)
+    answer = n
+    
+    while True:
+        try:
+            list1 = int(input ('please guess numbers 1-10....'))
+            
+            if n == list1:
+                print("Correct!")
+                break
+            elif (abs(n-list1)<2):
+                print("It's so close! Try again!")
+            else:
+                print("Well, you'd gotta do better!")
+        except ValueError:
+            print("please only put numbers")
