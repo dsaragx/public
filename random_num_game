@@ -6,7 +6,6 @@ import random
 
 def random_game():
     n = random.randint(1,10)
-    answer = n
     
     while True:
         try:
